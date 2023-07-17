@@ -22,7 +22,7 @@ The Core-Banking-System is a Java-based web application built using Spring Boot 
 - Maven 3.6.1 or higher
 
 ### Installation
-1. Clone the repository: `git clone https://github.com/your-username/Core-Banking-System.git`
+1. Clone the repository: `https://github.com/sallmazakii/Basic-Core-Banking-System`
 2. Create a PostgreSQL database named `core_banking_system`
 3. Update the `application.properties` file with your PostgreSQL username and password
 4. Build the project: `mvn clean install`
@@ -32,25 +32,28 @@ The application should now be running on `http://localhost:8080`. You can use a 
 
 ## API Endpoints
   # Prroduct
-- `GET /products`: Get all products
-- `GET /products/{id}`: Get a product by ID
-- `POST /products`: Create a new product
-- `PUT /products/{id}`: Update a product by ID
-- `DELETE /products/{id}`: Delete a product by ID
+- `GET /retrieveAllProducts`: Get all products
+- `GET /retrieveProductById/{id}`: Get a product by ID
+- `GET /retrieveProductByName/{name}` : Get a product by name
+- `POST /createProduct`: Create a new product
+- `PUT /updateProduct`: Update a product by ID
+- `DELETE /deleteProduct/{id}`: Delete a product by ID
+- `DELETE /deleteAllProducts`: Delete all products
 
   # Customer
 - 
-- `GET /customers`: Get all customers
-- `GET /customers/{id}`: Get a customer by ID
-- `POST /customers`: Create a new customer
-- `PUT /customers/{id}`: Update a customer by ID
-- `DELETE /customers/{id}`: Delete a customer by ID
+- `GET /retrieveAllCustomers`: Get all customers
+- `GET /retrieveCustomerById/{id}`: Get a customer by ID
+- `POST /createCustomer`: Create a new customer
+- `PUT /updateCustomer/{id}`: Update a customer by ID
+- `DELETE /deleteCustomer/{id}`: Delete a customer by ID
+- `DELETE /deleteAllCustomers`: Delete all customers
 
   # Office
   
-- `GET /offices`: Get all offices
-- `GET /offices/{id}`: Get an office by ID
-- `POST /offices`: Create a new office
-- `PUT /offices/{id}`: Update an office by ID
-- `DELETE /offices/{id}`: Delete an office by ID
+- `GET /retrieveAllOffices`: Get all offices
+- `GET /retrieveOfficeById/{id}`: Get an office by ID
+- `POST /createOffice`: Create a new office
+- `PUT /updateOffice`: Update an office by ID
+- `DELETE /deleteOffice/{id}`: Delete an office by ID
 
