@@ -21,22 +21,18 @@ public class CustomerController {
     public List<Customer> retrieveAllCustomers() {
        return customerService.retrieveAllCustomers();
     }
-
     @GetMapping("/retrieveCustomerById/{id}")
     public Customer retrieveCustomerById(@PathVariable("id") Long id){
         return customerService.retrieveCustomerById(id);
     }
-
     @PutMapping("/updateCustomer")
     public Customer updateCustomer(@RequestParam Long id, @RequestBody CustomerDTO customerDTO){
         return customerService.updateCustomer(id, customerDTO);
     }
-
     @DeleteMapping("/deleteCustomer/{id}")
     public void deleteCustomer(@PathVariable("id") Long id) {
         customerService.deleteCustomer(id);
     }
-
     @PostMapping("/createCustomer")
     public Customer createCustomer(@Valid @RequestBody CustomerDTO customerDTO){
         return customerService.createCustomer(customerDTO);

@@ -3,6 +3,7 @@ package com.example.office.service;
 import com.example.office.domain.Product;
 import com.example.office.domain.ProductDTO;
 import com.example.office.exception.NotFoundException;
+import com.example.office.repo.ProductRepo;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class ProductService {
-    final com.example.office.repo.productRepo productRepo;
+    final ProductRepo productRepo;
 
     public List<Product> retrieveAllProducts() {
         return productRepo.findAll();

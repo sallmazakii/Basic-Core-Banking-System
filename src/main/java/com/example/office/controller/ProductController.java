@@ -48,6 +48,6 @@ public class ProductController {
     }
     @DeleteMapping("/deleteAllProducts")
     public void deleteAllProducts(){
-         productService.deleteAllProducts();
+        productService.deleteAllProducts();
     }
 }

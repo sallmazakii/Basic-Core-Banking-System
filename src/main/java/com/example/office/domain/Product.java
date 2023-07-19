@@ -1,7 +1,11 @@
 package com.example.office.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
+
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,27 +19,24 @@ import lombok.*;
         @SequenceGenerator(name = "product_sequence", sequenceName = "product_sequence", allocationSize = 1)
         @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_sequence")
         private Long id;
-
         @Column
         private String name;
-
         @Column
+        @NotNull
         private Long noRepaymentMin;
-
         @Column
         private Long noRepaymentMax;
-
         @Column
         private Long principalMin;
-
         @Column
         private Long principalMax;
-
         @Column
         private Long commission;
-
         @Column
         private Long fees;
+        @OneToMany(mappedBy = "productID", cascade = CascadeType.ALL)
+        @JsonIgnore
+        private List<Loan>loans;
 
     public static Product createProduct (ProductDTO productDTO){
          return Product.builder()

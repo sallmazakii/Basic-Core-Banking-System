@@ -23,5 +23,5 @@ public class Office {
     private String name;
     @OneToMany(mappedBy = "officeID", cascade = CascadeType.ALL)
     @JsonIgnore
-    private List<Customer> customers;
+    private List<Customer>customers;
 }

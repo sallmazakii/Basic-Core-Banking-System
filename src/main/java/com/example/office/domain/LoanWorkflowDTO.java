@@ -9,12 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class CustomerDTO {
-    @NotBlank(message = "Must provide name.")
-    private String name;
-    @NotNull(message = "Must provide National ID Number.")
-    private Long nationalID;
-    @NotNull(message = "Must provide Office ID.")
-    private Long officeID;
-
+public class LoanWorkflowDTO {
+    @NotBlank(message = "Must provide comment.")
+    private String comments;
+    @NotNull(message = "Must provide Loan ID")
+    private Long loanID;
 }
