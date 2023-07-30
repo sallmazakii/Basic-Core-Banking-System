@@ -34,6 +34,9 @@ public class Loan {
     @OneToMany(mappedBy = "loanID", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<LoanWorkflow> flow;
+    @OneToMany(mappedBy = "loanID", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<PaymentSchedule> schedule;
 
     public static Loan createLoan (LoanDTO loanDTO ,Customer customer, Product product){
         return Loan.builder()
