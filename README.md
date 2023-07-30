@@ -11,13 +11,14 @@ The Core-Banking-System is a Java-based web application built using Spring Boot 
 
 ## Technologies Used
 - Spring Boot 3.1.1
+- Spring Security
 - PostgreSQL
 - Jakarta Validation
 
 ## Getting Started
 
 ### Prerequisites
-- Java 8 or higher
+- Java 17 or higher
 - PostgreSQL 9.4 or higher
 - Maven 3.6.1 or higher
 
@@ -25,8 +26,8 @@ The Core-Banking-System is a Java-based web application built using Spring Boot 
 1. Clone the repository: `https://github.com/sallmazakii/Basic-Core-Banking-System`
 2. Create a PostgreSQL database named `core_banking_system`
 3. Update the `application.properties` file with your PostgreSQL username and password
-4. Build the project: `mvn clean install`
-5. Run the application: `java -jar target/core-banking-system-0.0.1-SNAPSHOT.jar`
+4. Build the project: `mvn clean package`
+5. Run the application: `java -jar target/core-banking-system-0.0.1-SNAPSHOT.war`
 
 The application should now be running on `http://localhost:8080`. You can use a tool like Postman to test the API endpoints.
 
