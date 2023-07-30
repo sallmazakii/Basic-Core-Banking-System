@@ -57,3 +57,25 @@ The application should now be running on `http://localhost:8080`. You can use a 
 - `PUT /updateOffice`: Update an office by ID
 - `DELETE /deleteOffice/{id}`: Delete an office by ID
 
+  # Loan
+  
+- `GET /retrieveAllLoans`: Get all loans
+- `GET /retrieveLoanById/{id}`: Get a loan by ID
+- `POST /createLoan`: Create a new loan
+- `PUT /updateLoan`: Update an loan by ID
+- `DELETE /deleteLoan/{id}`: Delete a loan by ID
+
+
+  # Loan Workflow
+  
+- `POST /firstApprove`: revision approval for a loan 
+- `POST /secondApprove/{id}`: Central revision approval for a loan
+- `POST /thirdApprove`: Office branch manager approval for a loan
+- `POST /issuance`: issue a loan
+
+  # Authentication
+- 'POST /signup': sign up
+- 'POST /signin': sign in
+  
+
+
